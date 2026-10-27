@@ -384,7 +384,7 @@ async function endGame(){lastEntry=buildEntry();await submitScore(lastEntry);sho
  card=buildScorecard();$("cardWrap").innerHTML="";$("cardWrap").appendChild(card);
  $("linkTxt").textContent=challengeLink()}
 function challengeLink(){const base=location.origin&&location.origin!=="null"?location.origin+location.pathname:location.pathname;return`${base}?club=${club.slug}&score=${G.score}&from=${encodeURIComponent(player)}`}
-function shareText(){return`I scored ${G.score} for ${club.n} in Blobby's Colour Kick and painted ${Math.round(G.paint*100)}% of the goal! 🎨⚽ Beat me: ${challengeLink()} #ShowYourTrueColours #BlobbysFanFrenzy @NipponPaintIndia`}
+function shareText(){return`I scored ${G.score} for ${club.n} in Blobby's Colour Kick and painted ${Math.round(G.paint*100)}% of the goal! 🎨⚽ Beat me: ${challengeLink()} #ShowYourTrueColours @NipponPaintIndia`}
 function buildScorecard(){const S=1080,Hh=1350,c=document.createElement("canvas");c.width=S;c.height=Hh;const x=c.getContext("2d");
  const gr=x.createLinearGradient(0,0,S*.3,Hh);gr.addColorStop(0,club.a);gr.addColorStop(1,mix(club.a,"#000000",.62));x.fillStyle=gr;x.fillRect(0,0,S,Hh);
  // colour stripes + decorative splats in the club's colours
